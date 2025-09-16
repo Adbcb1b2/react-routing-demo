@@ -1,68 +1,97 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
+  font-family: sans-serif;
+}
+
+h4, h3, h3, .page{
+  padding: 5px;
+  margin: 5px;
+}
+
+.page {
+  display: inline-block;
+  border: 1px lightgrey solid;
+}
+
+.pageContent{
+  padding: 5px;
+  width: 350px;
+}
+
+.page h4{
+  background-color: lightgrey;
+}
+
+nav{
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: fit-content;
+  background-color: lightgrey;
+  padding: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+nav a {
+  color: initial;
+  text-decoration: none;
   font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-family: sans-serif;
+  padding: 2px 6px 4px 6px;
+  border-radius: 5px;
+  background-color: white;
+  display: inline-block;
+  margin: 2px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+nav a:hover {
+  background-color: #aaa;
+}
+
+nav a.active {
+  color: green;
+  font-weight: bold;
+}
+
+.productTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.productTable td {
+  border: 2px solid lightgrey;
+  padding: 5px;
+} 
+
+.productList {
+  list-style-type: none;
+  padding: 5px;
+  margin: 5px;
+}
+
+.productList li {
+  margin: 2px;
+  padding: 8px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  min-width: 120px;        /* Optional: set a minimum width */
+}
+
+.productList a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  display: inline-block;   /* Use inline-block to avoid stretching */
+  text-align: center;      /* Center text inside the link */
+  width: auto;             /* Let width be determined by parent */
+}
+
+.productList li:hover {
+  background: #e0e0e0;    /* Change background on hover */
+  color: #0056b3;         /* Change color on hover */
+  text-decoration: none;  /* Remove underline on hover */
 }
